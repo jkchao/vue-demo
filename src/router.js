@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const demo1 = resolve => require(['./views/demo1.vue'], resolve)
-const demo2 = resolve => require(['./views/demo2.vue'], resolve)
+import demo1 from './views/demo1.vue'
+import demo2 from './views/demo2.vue'
 
 Vue.use(Router)
 
