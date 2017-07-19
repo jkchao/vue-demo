@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const demo1 = () => import ('./views/demo1.vue')
-const demo2 = () => import ('./views/demo2.vue')
-const demo3 = () => import ('./views/demo3.vue')
+import demo1 from './views/demo1.vue'
+import demo2 from './views/demo2.vue'
+import demo3 from './views/demo3.vue'
 
 Vue.use(Router)
 
