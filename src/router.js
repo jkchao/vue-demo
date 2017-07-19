@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import demo1 from './views/demo1.vue'
-import demo2 from './views/demo2.vue'
+const demo1 = () => import ('./views/demo1.vue')
+const demo2 = () => import ('./views/demo2.vue')
+const demo3 = () => import ('./views/demo3.vue')
 
 Vue.use(Router)
 
@@ -22,8 +23,8 @@ export default new Router({
     },
     {
       path: '/demo3',
-      name: 'demo3',
-      component: demo1
+      name: 'async component',
+      component: demo3
     }
   ]
 })
