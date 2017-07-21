@@ -3,19 +3,19 @@ import Router from 'vue-router'
 import loadingCom from './components/loadingCom.vue'
 import errorCom from './components/errCom.vue'
 
-const demo1 = () => import('./views/demo1.vue').then(m => m.default)
-const demo2 = () => import('./views/demo2.vue').then(m => m.default)
-const demo3 = () => import('./views/demo3.vue').then(m => m.default)
-const demo4 = () => import('./views/demo4.vue').then(m => m.default)
+const demo1 = () => import('./views/demo1.vue')
+const demo2 = () => import('./views/demo2.vue')
+const demo3 = () => import('./views/demo3.vue')
+const demo4 = () => import('./views/demo4.vue')
 const demo5 = () => ({
-  component: import('./views/demo5.vue').then(m => m.default),
+  component: import('./views/demo5.vue'),
   loading: loadingCom,
   error: errorCom,
   delay: 100,
   timeout: 3000
 })
-const demo6 = () => import('./views/demo6.vue').then(m => m.default)
-const demo7 = () => import('./views/demo7.vue').then(m => m.default)
+const demo6 = () => import('./views/demo6.vue')
+const demo7 = () => import('./views/demo7.vue')
 
 
 Vue.use(Router)

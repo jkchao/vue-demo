@@ -8,7 +8,6 @@
 
 <script>
 
-
 import loadingCom from '../components/loadingCom.vue'
 import errCom from '../components/errCom.vue'
 

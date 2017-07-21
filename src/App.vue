@@ -54,4 +54,8 @@ export default {
 .demo {
   margin-top: 50px;
 }
+
+p {
+  margin: 0;
+}
 </style>

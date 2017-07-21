@@ -1,13 +1,14 @@
 <template>
-  <div id='child1'>
+  <div id='child'>
     <h4>This is a child components</h4>
-    bar: {{ bar }} <button @click="increase"> + </button>
+    bar: {{ bar }}
+    <button @click="increase"> + </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'child1',
+  name: 'child',
   props: ['bar'],
   data () {
     return {
