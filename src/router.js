@@ -15,7 +15,6 @@ const demo5 = () => ({
   timeout: 3000
 })
 const demo6 = () => import('./views/demo6.vue')
-const demo7 = () => import('./views/demo7.vue')
 
 
 Vue.use(Router)
@@ -53,11 +52,6 @@ export default new Router({
       path: '/demo6',
       name: 'demo6',
       component: demo6
-    },
-    {
-      path: '/demo7',
-      name: 'demo7',
-      component: demo7
     }
   ]
 })
