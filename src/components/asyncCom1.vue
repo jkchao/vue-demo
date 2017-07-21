@@ -1,13 +1,12 @@
 <template>
-  <div id='sync'>
-    <h4>This is a async component</h4>
+  <div id='sync1'>
+    <h4>This is a async component1</h4>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'sync'
-
+  name: 'sync1'
 }
 </script>
 

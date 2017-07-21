@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import child from '../components/child2.vue'
+import child from '../components/child.vue'
 export default {
   name: 'demo2',
   data () {

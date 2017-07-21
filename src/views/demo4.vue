@@ -1,15 +1,13 @@
 <template>
   <div id='demo3'>
-    <h3>demo3</h3>
-    <!--sss  -->
-    <asyncCom></asyncCom>
+    <h3>demo4</h3>
+    <button @click="state = true">点击</button>
+     <asyncCom v-if="state"></asyncCom> 
   </div>
 </template>
 
 <script>
 
-// 2.3 之前
-// const asyncCom = () => import('../components/asyncCom.vue')
 
 import loadingCom from '../components/loadingCom.vue'
 import errCom from '../components/errCom.vue'
@@ -18,7 +16,7 @@ import errCom from '../components/errCom.vue'
 const asyncCom = () => ({
   component: new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(import('../components/asyncCom1.vue'))
+      resolve(import('../components/asyncCom2.vue'))
       // reject()
     }, 2000)
   }),
@@ -29,13 +27,12 @@ const asyncCom = () => ({
 })
 
 export default {
-  name: 'demo3',
+  name: 'demo4',
   data () {
     return {
       state: false  
     }
   },
-  comments: true,
   components: {
     asyncCom
   }

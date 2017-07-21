@@ -1,9 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import loadingCom from './components/loadingCom.vue'
+import errorCom from './components/errCom.vue'
 
-import demo1 from './views/demo1.vue'
-import demo2 from './views/demo2.vue'
-import demo3 from './views/demo3.vue'
+const demo1 = () => import('./views/demo1.vue').then(m => m.default)
+const demo2 = () => import('./views/demo2.vue').then(m => m.default)
+const demo3 = () => import('./views/demo3.vue').then(m => m.default)
+const demo4 = () => import('./views/demo4.vue').then(m => m.default)
+const demo5 = () => ({
+  component: import('./views/demo5.vue').then(m => m.default),
+  loading: loadingCom,
+  error: errorCom,
+  delay: 100,
+  timeout: 3000
+})
+const demo6 = () => import('./views/demo6.vue').then(m => m.default)
+const demo7 = () => import('./views/demo7.vue').then(m => m.default)
+
 
 Vue.use(Router)
 
@@ -23,8 +36,28 @@ export default new Router({
     },
     {
       path: '/demo3',
-      name: 'async component',
+      name: 'async component1',
       component: demo3
+    },
+    {
+      path: '/demo4',
+      name: 'async component2',
+      component: demo4
+    },
+    {
+      path: '/demo5',
+      name: 'async component3',
+      component: demo5
+    },
+    {
+      path: '/demo6',
+      name: 'demo6',
+      component: demo6
+    },
+    {
+      path: '/demo7',
+      name: 'demo7',
+      component: demo7
     }
   ]
 })
