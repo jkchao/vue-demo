@@ -14,4 +14,4 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-https://github.com/jkchao/blog/issues/15
+https://jkchao.cn/article/59d6e7e47e2ee06d412efef7
